@@ -1,6 +1,7 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
 export default class Answer extends Model {
+  @belongsTo("question") question;
   @attr("string") body;
   @attr("date", {
     defaultValue() {

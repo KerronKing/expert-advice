@@ -1,6 +1,8 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo, hasMany } from '@ember-data/model';
 
 export default class Question extends Model {
+  @belongsTo("user") user;
+  @hasMany("answer") answers;
   @attr("string") title;
   @attr("string") description;
   @attr tags;
