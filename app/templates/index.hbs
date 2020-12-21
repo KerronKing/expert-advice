@@ -1,0 +1,17 @@
+<h3 class="mt-5 pt-5 offset-1">Expert Advice</h3>
+<p class="offset-1">Get answers to difficult questions</p>
+
+<div class="offset-1 d-flex justify-content-between">
+  <form>
+    <input name="search" type="text" id="search" placeholder="Search" />
+  </form>
+  {{!-- <LinkTo @route="new" class="btn btn-primary">Ask a question</LinkTo> --}}
+</div>
+
+<ul>
+  {{#each model as |question|}}
+    {{#link-to "question" question.id}}
+      <li>{{question.title}}</li>
+    {{/link-to}}
+  {{/each}}
+</ul>

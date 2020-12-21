@@ -31,4 +31,11 @@ export default function() {
     }
     return new Response(401);
   });
+
+  this.get('/questions');
+  this.get('/questions/:id');
 }
+
+// this.post('/questions');
+// this.put('/questions/:id');
+// this.del('/questions/:id');
