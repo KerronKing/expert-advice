@@ -37,6 +37,8 @@ export default function() {
   this.del('/questions/:id');
   this.post('/questions');
   this.put('/questions/:id');
+  this.post('/answers');
+  this.get('/questions/:id/answers')
 }
 
 

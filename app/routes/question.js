@@ -5,6 +5,8 @@ export default class QuestionRoute extends Route {
   @service store
 
   model(params) {
-    return this.store.findRecord('question', params.id)
+    return this.store.findRecord('question', params.id, {
+      include: 'answers'
+    })
   }
 }

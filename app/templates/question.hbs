@@ -1,2 +1,19 @@
 <h1 class="mt-5 pt-5 offset-1">{{model.title}}</h1>
 <p class="offset-1">{{model.description}}</p>
+
+<form onsubmit={{action "createAnswer" model}}>
+  <h2>Answer</h2>
+  <div>
+    <label for="body">Body</label>
+    {{textarea rows="8" cols="80" value=body}}
+  </div>
+  <button type="submit" class="btn btn-primary">Answer</button>
+</form>
+
+{{#if model.answers}}
+  {{#each model.answers as |answer|}}    
+    <p>{{answer.body}}</p>
+  {{/each}}
+{{else}}
+  <p>No answers currently..</p>
+{{/if}}

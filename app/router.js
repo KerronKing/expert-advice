@@ -10,7 +10,9 @@ Router.map(function() {
   this.route("login");
   this.route("signup");
   this.route("index", { path: '/' });
-  this.route('question', { path: '/questions/:id' });
+  this.route('question', { path: '/questions/:id' }, function() {
+    this.route('answer', { path: '/question/:id/answers'})
+  });
   this.route('create', { path: '/ask-a-question' });
   this.route('edit', { path: '/question/:id/edit' });
 });
