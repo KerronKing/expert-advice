@@ -34,8 +34,8 @@ export default function() {
 
   this.get('/questions');
   this.get('/questions/:id');
+  this.del('/questions/:id');
 }
 
 // this.post('/questions');
 // this.put('/questions/:id');
-// this.del('/questions/:id');

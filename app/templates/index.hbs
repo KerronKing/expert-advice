@@ -11,7 +11,15 @@
 <ul>
   {{#each model as |question|}}
     {{#link-to "question" question.id}}
-      <li>{{question.title}}</li>
+      <li>
+        {{question.title}}
+        <button
+          type="button"
+          onclick={{action "deleteQuestion" question}}
+        >
+          Delete
+        </button>
+      </li>
     {{/link-to}}
   {{/each}}
 </ul>
