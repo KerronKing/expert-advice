@@ -5,7 +5,9 @@
   <form>
     <input name="search" type="text" id="search" placeholder="Search" />
   </form>
-  {{!-- <LinkTo @route="new" class="btn btn-primary">Ask a question</LinkTo> --}}
+  {{#link-to "create" class="btn btn-primary"}}
+    Ask a question
+  {{/link-to}}
 </div>
 
 <ul>

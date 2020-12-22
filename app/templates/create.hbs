@@ -1,0 +1,10 @@
+<form onsubmit={{action "createQuestion"}}>
+  <div>
+    <label for="title">Title</label>
+    {{input type="text" id="title" value=title}}
+  </div>
+  <div>
+    <label for="description">Description</label>
+    {{textarea rows="8" cols="80" value=description}}
+  </div>
+</form>
