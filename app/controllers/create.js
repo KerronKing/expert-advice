@@ -5,9 +5,12 @@ export default Controller.extend({
     createQuestion(event) {
       event.preventDefault();
 
+      let tags = this.tags.split(',');
+
       let question = this.store.createRecord('question', {
         title: this.title,
-        description: this.description
+        description: this.description,
+        tags
       })
 
       question.save().then(() => {

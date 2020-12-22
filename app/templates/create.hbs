@@ -1,4 +1,5 @@
 <form onsubmit={{action "createQuestion"}}>
+  <h2>Ask a question</h2>
   <div>
     <label for="title">Title</label>
     {{input type="text" id="title" value=title}}
@@ -7,7 +8,11 @@
     <label for="description">Description</label>
     {{textarea rows="8" cols="80" value=description}}
   </div>
+  <div>
+    <label for="tags">Tags (separated by comma)</label>
+    {{input type="text" id="tags" value=tags}}
+  </div>
   <button class="btn btn-primary" type="submit">
-    Ask
+    Post A Question
   </button>
 </form>
