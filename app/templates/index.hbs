@@ -12,16 +12,20 @@
 
 <ul>
   {{#each model as |question|}}
-    {{#link-to "question" question.id}}
-      <li>
+    <li>
+      {{#link-to "question" question.id}}
         {{question.title}}
-        <button
-          type="button"
-          onclick={{action "deleteQuestion" question}}
-        >
-          Delete
-        </button>
-      </li>
-    {{/link-to}}
+      {{/link-to}}
+      <button
+        type="button"
+        class="btn btn-danger"
+        onclick={{action "deleteQuestion" question}}
+      >
+        Delete
+      </button>
+      {{#link-to "edit" question.id class="btn btn-warning"}}
+        Edit
+      {{/link-to}}
+    </li>
   {{/each}}
 </ul>
