@@ -36,6 +36,13 @@ h2, h3 { font-weight: bold; }
 .question-title {
   font-size: 1.25rem;
 }
+.tag {
+  border-radius: 15px;
+}
+.deleter {
+  position: relative;
+  bottom: 1.21rem;
+}
 
 textarea {
   background-color: #f5f6f5;

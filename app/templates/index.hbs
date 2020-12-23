@@ -20,16 +20,23 @@
   <h2 class="my-5 offset-1">Questions</h2>
   <ul class="question-list offset-1 pl-0">
     {{#each model as |question|}}
-      <li class="questions my-5">
-        {{#link-to "question" question.id class="question-title"}}
-          {{question.title}}
-        {{/link-to}}
+      <li class="questions my-5 d-flex">
+        <div>
+          {{#link-to "question" question.id class="question-title mb-3"}}
+            {{question.title}}
+          {{/link-to}}
+          <div class="d-flex">
+            {{#each question.tags as |tag|}}
+              <span class="btn btn-primary mr-2 tag">{{tag}}</span>
+            {{/each}}
+          </div>
+        </div>
         {{#link-to "edit" question.id class="ml-5"}}
           <img src="https://img.icons8.com/ultraviolet/30/000000/edit-property.png"/>
         {{/link-to}}
         <button
           type="button"
-          class="border-0 bg-transparent ml-2"
+          class="border-0 bg-transparent ml-2 deleter"
           onclick={{action "deleteQuestion" question}}
         >
           <img src="https://img.icons8.com/dusk/30/000000/delete-forever.png"/>

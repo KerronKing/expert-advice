@@ -5,7 +5,8 @@ export default Controller.extend({
     createQuestion(event) {
       event.preventDefault();
 
-      let tags = this.tags.split(',');
+      let tagsArray = this.tags.split(',');
+      let tags = tagsArray.map(tag => tag.toLowerCase());
 
       let question = this.store.createRecord('question', {
         title: this.title,

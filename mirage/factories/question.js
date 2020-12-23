@@ -6,5 +6,8 @@ export default Factory.extend({
   },
   description() {
     return 'Test description';
+  },
+  tags() {
+    return ['energy', 'weather', 'news'];
   }
 });
