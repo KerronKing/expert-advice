@@ -2,9 +2,37 @@
 @import "main";
 
 body, .h-screen {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   height: 100vh;
 }
-
+.nav-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+h2, h3 { font-weight: bold; }
 .login-form__error {
   color: #dc3545;
+}
+
+.search {
+  background-color: #f5f6f5;
+  border: 1px solid #cfcecf;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 200%;
+}
+
+.ask-btn {
+  line-height: 2;
+  margin-left: 40%;
+}
+
+.question-list {
+  list-style-type: none;
+}
+.questions {
+  text-decoration: none;
+}
+.question-title {
+  font-size: 1.25rem;
 }

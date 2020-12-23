@@ -1,31 +1,40 @@
 <h3 class="mt-5 pt-5 offset-1">Expert Advice</h3>
 <p class="offset-1">Get answers to difficult questions</p>
 
-<div class="offset-1 d-flex justify-content-between">
+<div class="offset-1 d-flex my-5">
   <form>
-    <input name="search" type="text" id="search" placeholder="Search" />
+    <input
+      name="search"
+      class="search"
+      type="text"
+      id="search"
+      placeholder="Search"
+    />
   </form>
-  {{#link-to "create" class="btn btn-primary"}}
+  {{#link-to "create" class="btn btn-primary ask-btn"}}
     Ask a question
   {{/link-to}}
 </div>
 
-<ul>
-  {{#each model as |question|}}
-    <li>
-      {{#link-to "question" question.id}}
-        {{question.title}}
-      {{/link-to}}
-      <button
-        type="button"
-        class="btn btn-danger"
-        onclick={{action "deleteQuestion" question}}
-      >
-        Delete
-      </button>
-      {{#link-to "edit" question.id class="btn btn-warning"}}
-        Edit
-      {{/link-to}}
-    </li>
-  {{/each}}
-</ul>
+<div>
+  <h2 class="my-5 offset-1">Questions</h2>
+  <ul class="question-list offset-1 pl-0">
+    {{#each model as |question|}}
+      <li class="questions my-5">
+        {{#link-to "question" question.id class="question-title"}}
+          {{question.title}}
+        {{/link-to}}
+        {{#link-to "edit" question.id class="ml-5"}}
+          <img src="https://img.icons8.com/ultraviolet/30/000000/edit-property.png"/>
+        {{/link-to}}
+        <button
+          type="button"
+          class="border-0 bg-transparent ml-2"
+          onclick={{action "deleteQuestion" question}}
+        >
+          <img src="https://img.icons8.com/dusk/30/000000/delete-forever.png"/>
+        </button>
+      </li>
+    {{/each}}
+  </ul>
+</div>
