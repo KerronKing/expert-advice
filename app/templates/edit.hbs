@@ -1,13 +1,17 @@
-<form onsubmit={{action "editQuestion"}}>
-  <div>
-    <label for="title">Title</label>
-    {{input type="text" id="title" value=model.title}}
+<h3 class="mt-5 pt-5 offset-1">Expert Advice</h3>
+<p class="offset-1">Get answers to difficult questions</p>
+
+<form onsubmit={{action "editQuestion"}} class="mt-5 offset-1">
+  <h2>Edit your question</h2>
+  <div class="my-5">
+    <label for="title">Title</label><br /><br />
+    {{input type="text" id="title" class="question-input p-2" value=model.title}}
   </div>
-  <div>
-    <label for="description">Description</label>
-    {{textarea rows="8" cols="80" value=model.description}}
+  <div class="my-5">
+    <label for="description">Description</label><br /><br />
+    {{textarea rows="12" cols="60" value=model.description}}
   </div>
-  <button class="btn btn-primary" type="submit">
+  <button class="btn btn-primary mb-5" type="submit">
     Edit
   </button>
 </form>
