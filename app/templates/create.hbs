@@ -1,16 +1,19 @@
-<form onsubmit={{action "createQuestion"}}>
+<h3 class="mt-5 pt-5 offset-1">Expert Advice</h3>
+<p class="offset-1">Get answers to difficult questions</p>
+
+<form onsubmit={{action "createQuestion"}} class="mt-5 offset-1">
   <h2>Ask a question</h2>
-  <div>
-    <label for="title">Title</label>
-    {{input type="text" id="title" value=title}}
+  <div class="my-5">
+    <label for="title">Title</label><br /><br />
+    {{input type="text" id="title" class="question-input p-2" value=title}}
   </div>
-  <div>
-    <label for="description">Description</label>
-    {{textarea rows="8" cols="80" value=description}}
+  <div class="my-5">
+    <label for="description">Description</label><br /><br />
+    {{textarea rows="12" cols="80" value=description}}
   </div>
-  <div>
-    <label for="tags">Tags (separated by comma)</label>
-    {{input type="text" id="tags" value=tags}}
+  <div class="my-5">
+    <label for="tags">Tags (separated by comma)</label><br /><br />
+    {{input type="text" id="tags" class="question-input p-2" value=tags}}
   </div>
   <button class="btn btn-primary" type="submit">
     Post A Question
